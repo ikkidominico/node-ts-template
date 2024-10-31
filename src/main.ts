@@ -1,5 +1,5 @@
 function main() {
-    console.log("hello world!");
+    console.log("Node Typescript Template 🍕");
 }
 
 main();

@@ -1,23 +1,23 @@
 {
-    "name": "be-node-ts-template",
-    "description": "Template project to future backend apps using node and typescript.",
+    "name": "node-ts-template",
+    "description": "Template project for future apps using node and typescript",
     "version": "1.0.0",
     "engines": {
         "node": ">=20.18.0"
     },
     "main": "index.js",
     "scripts": {
-        "dev": "node -r ts-node/register -r tsconfig-paths/register --watch src/main.ts",
         "format": "eslint --fix && prettier '**/*.ts' --write",
         "test": "vitest",
+        "dev": "node -r ts-node/register -r tsconfig-paths/register --watch src/main.ts",
         "build": "tsc && tsc-alias",
+        "docker:build": "docker build -f Dockerfile -t ikkidominico/node-ts-template:1.0.0 .",
         "start": "node --env-file .env dist/src/main.js"
     },
     "keywords": [
-        "backend",
         "node",
         "typescript",
-        "api"
+        "vitest"
     ],
     "author": "Luiz Henrique Dominico",
     "license": "MIT",
